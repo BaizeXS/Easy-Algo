@@ -1,0 +1,31 @@
+my_project/
+│
+├── my_project/            # 项目的主要包
+│   ├── __init__.py        # 初始化脚本
+│   ├── module1.py         # 项目的一个模块
+│   ├── module2.py         # 另一个模块
+│   └── ...
+│
+├── tests/                 # 测试代码
+│   ├── __init__.py
+│   ├── test_module1.py
+│   ├── test_module2.py
+│   └── ...
+│
+├── docs/                  # 文档
+│   ├── conf.py
+│   ├── index.rst
+│   └── ...
+│
+├── examples/              # 示例代码
+│   ├── example1.py
+│   └── ...
+│
+├── scripts/               # 用于执行各种任务的脚本
+│   ├── script1.py
+│   └── ...
+│
+├── setup.py               # 安装、分发、部署的脚本
+├── requirements.txt       # 项目依赖
+├── README.md              # 项目说明文件
+└── .gitignore             # 指定Git忽略的文件和目录
