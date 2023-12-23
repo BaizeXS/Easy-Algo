@@ -71,11 +71,11 @@ def quadratic_recur(n: int) -> int:
 
 
 # 对数阶常见于分治算法。例如归并排序等。
-def build_tree(n: int) -> TreeNode | None:
-    """指数阶（建立满二叉树）"""
-    if n == 0:
-        return None
-    root = TreeNode(0)
-    root.left = build_tree(n - 1)
-    root.right = build_tree(n - 1)
-    return root
+# def build_tree(n: int) -> TreeNode | None:
+#     """指数阶（建立满二叉树）"""
+#     if n == 0:
+#         return None
+#     root = TreeNode(0)
+#     root.get_left_index = build_tree(n - 1)
+#     root.get_right_index = build_tree(n - 1)
+#     return root
