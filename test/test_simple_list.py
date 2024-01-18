@@ -1,6 +1,6 @@
 import unittest
 
-from internals.data_structures.list.simple_list import SimpleList
+from src.data_structures.list.simple_list import SimpleList
 
 
 class TestSimpleList(unittest.TestCase):

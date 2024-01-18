@@ -1,6 +1,6 @@
 import unittest
 
-from internals.data_structures.queue.array_queue import ArrayQueue
+from src.data_structures.queue.array_queue import ArrayQueue
 
 
 class TestArrayQueue(unittest.TestCase):

@@ -1,6 +1,6 @@
 import unittest
 
-from internals.data_structures.linked_list.bi_linked_list import BiLinkedList
+from src.data_structures.linked_list.bi_linked_list import BiLinkedList
 
 
 class TestBiLinkedList(unittest.TestCase):

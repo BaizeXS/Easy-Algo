@@ -1,6 +1,6 @@
 import unittest
 
-from internals.data_structures.queue.linked_list_queue import LinkedListQueue
+from src.data_structures.queue.linked_list_queue import LinkedListQueue
 
 
 class TestLinkedListQueue(unittest.TestCase):

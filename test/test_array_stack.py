@@ -1,6 +1,6 @@
 import unittest
 
-from internals.data_structures.stack.array_stack import ArrayStack
+from src.data_structures.stack.array_stack import ArrayStack
 
 
 class TestArrayStack(unittest.TestCase):

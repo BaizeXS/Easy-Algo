@@ -1,6 +1,6 @@
 import unittest
 
-from internals.data_structures.queue.array_deque import ArrayDeque
+from src.data_structures.queue.array_deque import ArrayDeque
 
 
 class TestArrayDeque(unittest.TestCase):
