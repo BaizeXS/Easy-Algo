@@ -22,6 +22,10 @@ def pre_order_traversal_i(root: TreeNode):
 
 
 def pre_order_traversal_ii(root: TreeNode):
+    """
+    在例题一代码的基础上，我们需要借助一个列表 path 记录访问过的节点路径。当访问到值为 7 的节点时，则复制 path
+    并添加进结果列表 res。遍历完成后，res中保存的就是所有解。
+    """
     if root is None:
         return
     # 尝试
@@ -43,8 +47,8 @@ def pre_order_traversal_iii(root: TreeNode):
     path.append(root)
     if root.value == 7:
         res.append(list(path))
-    pre_order_traversal_ii(root.left)
-    pre_order_traversal_ii(root.right)
+    pre_order_traversal_iii(root.left)
+    pre_order_traversal_iii(root.right)
     # 回退
     path.pop()
 
