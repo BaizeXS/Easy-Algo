@@ -1,44 +1,16 @@
 from __future__ import annotations
 from typing import TypeVar, Generic, Optional, Iterator
+from components import BiNode, SentinelBiNode, BiListNode
 
-T = TypeVar('T')
-
-
-class BiNode:
-    """双向链表节点的基类"""
-
-    def __init__(self):
-        self.prev: Optional[BiNode] = None
-        self.next: Optional[BiNode] = None
-
-
-class SentinelNode(BiNode):
-    """哨兵节点类"""
-    pass
-
-
-class BiListNode(BiNode, Generic[T]):
-    """双向链表节点类"""
-
-    def __init__(self,
-                 value: T,
-                 prev_node: Optional[SentinelNode | BiListNode[T]] = None,
-                 next_node: Optional[SentinelNode | BiListNode[T]] = None):
-        super().__init__()
-        self.value: T = value
-        self.prev: Optional[SentinelNode | BiListNode[T]] = prev_node
-        self.next: Optional[SentinelNode | BiListNode[T]] = next_node
-
-    def __repr__(self) -> str:
-        return f"BiListNode({self.value})"
+T = TypeVar("T")
 
 
 class BiLinkedList(Generic[T]):
     """双向链表类"""
 
     def __init__(self):
-        self.head: SentinelNode = SentinelNode()  # 创建哨兵头节点
-        self.tail: SentinelNode = SentinelNode()  # 创建哨兵尾节点
+        self.head: SentinelBiNode = SentinelBiNode()  # 创建哨兵头节点
+        self.tail: SentinelBiNode = SentinelBiNode()  # 创建哨兵尾节点
         self.head.next = self.tail
         self.tail.prev = self.head
         self._size = 0

@@ -1,39 +1,13 @@
 """
 链表
-
-常见链表类型：
-- 单向链表
-- 双向链表
-- 环形链表
-
-链表的典型应用：
-- 单项链表
-    - 栈和队列
-    - 哈希表 -> 解决哈希冲突的主流方案之一
-    - 图 -> 领接表是表示图的一种方式
-- 双向链表
-    - 高级数据结构（红黑树、B树等）
-    - 浏览器历史
-    - LRU 算法
-- 环形链表
-    - 时间片轮转调度算法
-    - 数据缓冲区
 """
+
 from __future__ import annotations
 from typing import TypeVar, Generic, Optional, Iterator
+from components import ListNode
 
-T = TypeVar('T')
 
-
-class ListNode(Generic[T]):
-    """链表节点类"""
-
-    def __init__(self, value: T, next_node: Optional[ListNode[T]] = None):
-        self.value = value
-        self.next = next_node
-
-    def __repr__(self) -> str:
-        return f"ListNode({self.value})"
+T = TypeVar("T")
 
 
 class LinkedList(Generic[T]):

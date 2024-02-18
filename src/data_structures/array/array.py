@@ -1,12 +1,13 @@
 """
 数组
 """
+
 import random
 
 
 def random_access(nums: list[int]) -> int:
     """随机访问元素"""
-    random_index = random.randint(0, len(nums))
+    random_index = random.randint(0, len(nums) - 1)
     return nums[random_index]
 
 
@@ -17,7 +18,7 @@ def insert(nums: list[int], num: int, index: int):
 
 def remove(nums: list[int], index: int):
     """删除索引 index 处的元素"""
-    nums[index:] = nums[index + 1:]
+    nums[index:] = nums[index + 1 :]
 
 
 def find(nums: list[int], target: int) -> int:
